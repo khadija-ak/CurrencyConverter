@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - CurrencyFlow</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeaff;
+            color: #29224f;
+        }
+
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 65px;
+            padding: 0 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #29224f;
+            color: white;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d9a7ff;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ddd5f5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover,
+        nav .active {
+            color: #d9a7ff;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            height: calc(100vh - 65px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .about-box {
+            width: 100%;
+            max-width: 850px;
+
+            display: flex;
+            align-items: center;
+            gap: 35px;
+
+            padding: 35px;
+
+            background: rgba(255, 255, 255, 0.75);
+
+            border: 2px solid #dfd2ff;
+            border-radius: 25px;
+
+            box-shadow: 0 18px 40px rgba(76, 48, 130, 0.12);
+        }
+
+        /* LEFT */
+
+        .about-text {
+            flex: 1;
+        }
+
+        .tag {
+            display: inline-block;
+
+            padding: 7px 13px;
+            margin-bottom: 12px;
+
+            background: #dfd2ff;
+            color: #7049bd;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.1;
+
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: #8758d8;
+        }
+
+        .about-text > p {
+            color: #716b86;
+            font-size: 14px;
+            line-height: 1.7;
+
+            margin-bottom: 18px;
+        }
+        /* SMALL INFO */
+        .info {
+            display: flex;
+            gap: 10px;
+        }
+
+        .info-box {
+            padding: 12px 15px;
+
+            background: #f4efff;
+
+            border-radius: 12px;
+
+            flex: 1;
+        }
+
+        .info-box strong {
+            display: block;
+
+            color: #7049bd;
+            font-size: 13px;
+
+            margin-bottom: 4px;
+        }
+
+        .info-box span {
+            color: #817a94;
+            font-size: 10px;
+        }
+        /* RIGHT */
+        .about-visual {
+            width: 280px;
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #ded1ff,
+                #f4dafa
+            );
+            
+            border-radius: 50%;
+        }
+        .info-box :hover {
+            background-color: #7049bd;
+            transform: scale(0.01);
+        }
+
+
+        .globe {
+            font-size: 110px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            html,
+            body {
+                overflow: auto;
+            }
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .about {
+                min-height: calc(100vh - 65px);
+                height: auto;
+            }
+
+            .about-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+
+            .about-visual {
+                width: 80px;
+                height: 100px
+            }
+
+            .globe {
+                font-size: 75px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .info {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✦</span> CurrencyFlow
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rates.html">Rates</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+
+    </header>
+
+    <!-- ABOUT SECTION -->
+
+    <main class="about">
+
+        <div class="about-box">
+
+            <!-- TEXT -->
+
+            <div class="about-text">
+
+                <span class="tag">
+                    ✦ About CurrencyFlow
+                </span>
+
+                <h1>
+                    Simple Currency
+                    <span>Conversion</span>
+                </h1>
+
+                <p>
+                    CurrencyFlow is a simple and easy-to-use
+                    currency converter designed to help you
+                    convert money between different currencies
+                    quickly.
+                </p>
+
+                <p>
+                    It uses exchange rate data from a currency
+                    API to provide updated conversion rates.
+                </p>
+
+
+                <div class="info">
+
+                    <div class="info-box">
+                        <strong>🌍 Global</strong>
+                        <span>Multiple currencies</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>⚡ Fast</strong>
+                        <span>Quick conversion</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>📊 Live</strong>
+                        <span>Updated rates</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- VISUAL -->
+
+            <div class="about-visual">
+                <img src="/Full Stack WebDev By Khadija Aslam/CurrencyCoverter/img/gollll-removebg-preview.png"  style="height: 650px;">
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

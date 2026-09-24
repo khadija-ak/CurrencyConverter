@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <span>✦</span> CurrencyFlow
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rates.html">Rates</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-title">✦ Live Exchange Rates</p>
+            <h1>
+                Convert Your Money
+                <span>Across the World</span>
+            </h1>
+            <p class="description">
+                Convert currencies quickly and easily with live exchange rates.
+            </p>
+            <!-- Converter Box -->
+            <div class="converter-box">
+
+                <!-- From Currency -->
+                <div class="currency-row">
+
+                    <div class="currency-field">
+                        <label for="fromCurrency">From</label>
+                        <div class="select-wrapper">
+                            <select id="fromCurrency">
+                               <option value="USD">USD - US Dollar</option>
+            <option value="PKR">PKR - Pakistani Rupee</option>
+            <option value="SAR">SAR - Saudi Riyal</option>
+            <option value="AED">AED - UAE Dirham</option>
+            <option value="GBP">GBP - British Pound</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Amount -->
+                    <div class="amount-field">
+                        <label for="amount">Amount</label>
+                        <input type="number"id="amount"value="100" min="0">  
+                    </div>
+                </div>
+                <!-- Swap Button -->
+                <button class="swap-btn" id="swapBtn">
+                    ⇅
+                </button>
+                <!-- To Currency -->
+                <div class="currency-row">
+                    <div class="currency-field">
+                        <label for="toCurrency">To</label>
+                        <div class="select-wrapper">
+                            <select id="toCurrency">
+                                <option value="PKR">PKR - Pakistani Rupee</option>
+            <option value="USD">USD - US Dollar</option>
+            <option value="SAR">SAR - Saudi Riyal</option>
+            <option value="AED">AED - UAE Dirham</option>
+            <option value="GBP">GBP - British Pound</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Result -->
+                    <div class="amount-field">
+                        <label for="result">Result</label>
+                        <input
+                            type="text" id="result" placeholder="0.00" readonly>
+                    </div>
+                </div>
+                <!-- Convert Button -->
+                <button class="convert-btn" id="convertBtn">
+                    ⇄  Convert
+                </button>
+                </div>
+    </section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

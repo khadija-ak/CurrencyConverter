@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Rates</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeaff;
+            color: #25204a;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            height: 70px;
+            padding: 0 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #29224f;
+            color: white;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d7a7ff;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ddd5f5;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover,
+        nav .active {
+            color: #d9aaff;
+        }
+
+
+        /* MAIN */
+        .rates-page {
+            min-height: calc(100vh - 70px);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px 20px;
+        }
+
+
+        /* HEADING */
+        .tag {
+            background: #d9c8ff;
+            color: #6542a8;
+
+            padding: 7px 14px;
+            border-radius: 20px;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 38px;
+            text-align: center;
+
+            margin-bottom: 8px;
+        }
+
+        h1 span {
+            color: #8758d8;
+        }
+
+        .subtitle {
+            color: #756f8d;
+            font-size: 14px;
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* RATE CARD */
+        .rate-card {
+            width: 100%;
+            max-width: 650px;
+
+            background: #ffffff;
+
+            border: 2px solid #dfd2ff;
+            border-radius: 20px;
+
+            padding: 20px;
+
+            box-shadow: 0 15px 35px rgba(76, 48, 130, 0.12);
+        }
+
+
+        /* CARD TOP */
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 12px;
+        }
+
+        .card-top h2 {
+            font-size: 18px;
+        }
+
+        .live {
+            background: #f4ddff;
+            color: #8a4eb2;
+
+            padding: 6px 10px;
+            border-radius: 15px;
+
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+
+        /* RATE ROW */
+        .rate {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 12px 10px;
+
+            margin-top: 8px;
+
+            background: #f7f3ff;
+
+            border-radius: 12px;
+
+          
+        }
+        .rate :hover{
+            background-color: #726aaa;
+            transform: scale(0.01);
+        }
+
+        .currency {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .flag {
+            font-size: 23px;
+        }
+
+        .currency h3 {
+            font-size: 14px;
+        }
+
+        .currency p {
+            font-size: 11px;
+            color: #88819d;
+
+            margin-top: 3px;
+        }
+
+        .value {
+            text-align: right;
+        }
+
+        .value small {
+            display: block;
+
+            color: #89839d;
+            font-size: 10px;
+
+            margin-bottom: 3px;
+        }
+
+        .value strong {
+            color: #7145c4;
+            font-size: 15px;
+        }
+
+
+        /* NOTE */
+        .note {
+            text-align: center;
+
+            margin-top: 15px;
+
+            color: #8a849d;
+            font-size: 11px;
+        }
+
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .rate-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✦</span> CurrencyFlow
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rates.html" class="active">Rates</a>
+            <a href="about.html">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- RATES PAGE -->
+    <main class="rates-page">
+
+        <div class="tag">
+            ✦ Today's Exchange Rates
+        </div>
+
+        <h1>
+            Currency <span>Rates</span>
+        </h1>
+
+        <p class="subtitle">
+            Current exchange rates against Pakistani Rupee
+        </p>
+
+
+        <!-- RATE CARD -->
+        <div class="rate-card">
+
+            <div class="card-top">
+                <h2>Exchange Rates</h2>
+
+                <span class="live">
+                    ● LIVE
+                </span>
+            </div>
+
+
+            <!-- USD -->
+            <div class="rate">
+
+                <div class="currency">
+                    <div class="flag">🇺🇸</div>
+
+                    <div>
+                        <h3>US Dollar</h3>
+                        <p>USD</p>
+                    </div>
+                </div>
+
+                <div class="value">
+                    <small>1 USD</small>
+                    <strong>≈ 278 PKR</strong>
+                </div>
+
+            </div>
+
+
+            <!-- PKR -->
+            <div class="rate">
+
+                <div class="currency">
+                    <div class="flag">🇵🇰</div>
+
+                    <div>
+                        <h3>Pakistani Rupee</h3>
+                        <p>PKR</p>
+                    </div>
+                </div>
+
+                <div class="value">
+                    <small>1 PKR</small>
+                    <strong>≈ 0.0036 USD</strong>
+                </div>
+
+            </div>
+
+
+            <!-- SAR -->
+            <div class="rate">
+
+                <div class="currency">
+                    <div class="flag">🇸🇦</div>
+
+                    <div>
+                        <h3>Saudi Riyal</h3>
+                        <p>SAR</p>
+                    </div>
+                </div>
+
+                <div class="value">
+                    <small>1 SAR</small>
+                    <strong>≈ 74 PKR</strong>
+                </div>
+
+            </div>
+
+
+            <!-- AED -->
+            <div class="rate">
+
+                <div class="currency">
+                    <div class="flag">🇦🇪</div>
+
+                    <div>
+                        <h3>UAE Dirham</h3>
+                        <p>AED</p>
+                    </div>
+                </div>
+
+                <div class="value">
+                    <small>1 AED</small>
+                    <strong>≈ 76 PKR</strong>
+                </div>
+
+            </div>
+
+
+            <!-- GBP -->
+            <div class="rate">
+
+                <div class="currency">
+                    <div class="flag">🇬🇧</div>
+
+                    <div>
+                        <h3>British Pound</h3>
+                        <p>GBP</p>
+                    </div>
+                </div>
+
+                <div class="value">
+                    <small>1 GBP</small>
+                    <strong>≈ 372 PKR</strong>
+                </div>
+
+            </div>
+
+
+            <p class="note">
+                * Rates will be updated automatically using the currency API.
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
